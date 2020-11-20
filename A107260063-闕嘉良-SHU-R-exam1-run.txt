@@ -1,0 +1,124 @@
+> #Exam1(a)
+> library(readxl)
+> a<- CalculusA <- read.csv("Calculus-score-A.csv")
+> b <- CalculusB <- read_excel("Calculus-score-B.xls", na = "NA")
+New names:
+* `` -> ...2
+* `` -> ...3
+* `` -> ...4
+> head(CalculusA, 5)
+  X104.2.Calculus         X
+1                          
+2            座號      學號
+3               1 401405008
+4               2 401550880
+5               3 404550061
+     X.1  X.2 X3月17日 X4月14日
+1              quiz(1)  quiz(2)
+2   姓名 性別       7%       7%
+3 希瑄彥   男       10        0
+4 張泓丞   男       25       40
+5 張安婕   女       18       15
+  X5月12日 X6月2日 實習課
+1  quiz(3) quiz(4)     TA
+2       8%      8%    15%
+3        5      20      0
+4       70      87     80
+5       48      33   86.7
+      X5月2日  X6月10日
+1 MidtermExam FinalExam
+2         25%       30%
+3          55        50
+4          46        68
+5          54        79
+  Attendance
+1 Attendance
+2      Times
+3          2
+4          9
+5          9
+> tail(CalculusA, 5)
+   X104.2.Calculus         X
+38              36 404550369
+39              37 404550420
+40              38 404550431
+41              39 404550442
+42              40 404550453
+      X.1 X.2 X3月17日 X4月14日
+38 陳王霖  女       55       73
+39 何瑄穎  男       28       10
+40 沈泓霏  女       15       25
+41 許安霏  女       53       60
+42 李政宜  男       80      100
+   X5月12日 X6月2日 實習課
+38       92      73    100
+39       35       3   66.7
+40       53      67   93.3
+41       80      72    100
+42       85     100    100
+   X5月2日 X6月10日 Attendance
+38      72       81          9
+39      30        0          7
+40      29       42          9
+41      61       62          9
+42      95      100          3
+> head(CalculusB, 5)
+# A tibble: 5 x 12
+  `104-2 Calculus` ...2  ...3 
+  <chr>            <chr> <chr>
+1 NA               NA    NA   
+2 座號             學號  姓名 
+3 1                4045~ 史文羽~
+4 2                4046~ 鄭樺妤~
+5 3                4046~ 張敬安~
+# ... with 9 more variables:
+#   ...4 <chr>, `3月17日` <chr>,
+#   `4月14日` <chr>,
+#   `5月12日` <chr>,
+#   `6月2日` <chr>, 實習課 <chr>,
+#   `5月2日` <chr>,
+#   `6月10日` <chr>,
+#   Attendance <chr>
+> tail(CalculusB, 5)
+# A tibble: 5 x 12
+  `104-2 Calculus` ...2  ...3 
+  <chr>            <chr> <chr>
+1 51               4046~ 鄭鈺尤~
+2 52               4046~ 楊宜路~
+3 53               4046~ 張渝妤~
+4 54               4046~ 廖暄安~
+5 55               4995~ 楊毅亦~
+# ... with 9 more variables:
+#   ...4 <chr>, `3月17日` <chr>,
+#   `4月14日` <chr>,
+#   `5月12日` <chr>,
+#   `6月2日` <chr>, 實習課 <chr>,
+#   `5月2日` <chr>,
+#   `6月10日` <chr>,
+#   Attendance <chr>
+> names(CalculusA)
+ [1] "X104.2.Calculus"
+ [2] "X"              
+ [3] "X.1"            
+ [4] "X.2"            
+ [5] "X3月17日"       
+ [6] "X4月14日"       
+ [7] "X5月12日"       
+ [8] "X6月2日"        
+ [9] "實習課"         
+[10] "X5月2日"        
+[11] "X6月10日"       
+[12] "Attendance"     
+> #Exam1(b)
+> score=rbind(a, b)
+Error in match.names(clabs, names(xi)) : 
+  names do not match previous names
+> 
+> 
+> #Exam2(a)
+> 
+> set.seed(123456)
+> Letters.code <- sample(LETTERS[1:5], 20, replace=T)
+> ifelse(Letters.code%in%LETTERS[1:5] ,1)
+ [1] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+[16] 1 1 1 1 1
