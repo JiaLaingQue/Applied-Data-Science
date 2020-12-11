@@ -1,0 +1,144 @@
+# 2020/12/11(五), 109學年第一學期 資料科學應用 R期中考
+
+學號:A107260063      姓名: 闕嘉良
+
+# (請依照規定)貼上執行程式碼及執行結果。
+詳見: R程式作業繳交方式
+http://www.hmwu.idv.tw/web/teaching/doc/R-how-homework.pdf
+
+> # ex1
+X <- c(13, 14, 15, 16, 17)
+Y <- c(8, 9, 10, 11, 12)
+English <- 400*X
+Computer <- 600*Y
+
+Tuition <- function(x){
+  #fee <- English+Computer  <= 12000
+  #U <- X^1/2*Y^1/2
+  study <- matrix(0, fee, U)
+  for(i in rep(X, 5)){
+    for(j in rep(Y, 5:5)){
+    study[i.j]  
+  }
+
+Tuition(x+y)
+  
+#ex2(a)
+>library(readxl)
+> mydata <- read_excel("Score-109.xlsx", sheet = "score", na = "NA")
+New names:
+* `` -> ...2
+* `` -> ...3
+> head(mydata, 5)
+# A tibble: 5 x 3
+  `109-1 Department of Mathematics` ...2     ...3   
+  <chr>                             <chr>    <chr>  
+1 ID                                Calculus English
+2 No.1                              72       62     
+3 No.2                              88       97     
+4 No.3                              76       66     
+5 No.4                              89       51     
+> tail(mydata, 5)
+# A tibble: 5 x 3
+  `109-1 Department of Mathematics` ...2  ...3 
+  <chr>                             <chr> <chr>
+1 No.71                             69    96   
+2 No.72                             51    100  
+3 No.73                             37    50   
+4 No.74                             33    92   
+5 No.75                             4     37  
+#ex2(b)
+mydata2 <- read_excel("Score-109.xlsx", sheet = "score", na = "0")
+New names:
+* `` -> ...2
+* `` -> ...3
+> str(mydata2)
+tibble [76 x 3] (S3: tbl_df/tbl/data.frame)
+ $ 109-1 Department of Mathematics: chr [1:76] "ID" "No.1" "No.2" "No.3" ...
+ $ ...2                           : chr [1:76] "Calculus" "72" "88" "76" ...
+ $ ...3                           : chr [1:76] "English" "62" "97" "66" ...
+> mydata2 <= 60
+      109-1 Department of Mathematics  ...2  ...3
+ [1,]                           FALSE FALSE FALSE
+ [2,]                           FALSE FALSE FALSE
+ [3,]                           FALSE FALSE FALSE
+ [4,]                           FALSE FALSE FALSE
+ [5,]                           FALSE FALSE  TRUE
+ [6,]                           FALSE  TRUE  TRUE
+ [7,]                           FALSE  TRUE FALSE
+ [8,]                           FALSE  TRUE  TRUE
+ [9,]                           FALSE  TRUE    NA
+[10,]                           FALSE FALSE  TRUE
+[11,]                           FALSE FALSE  TRUE
+[12,]                           FALSE  TRUE FALSE
+[13,]                           FALSE  TRUE FALSE
+[14,]                           FALSE FALSE  TRUE
+[15,]                           FALSE    NA FALSE
+[16,]                           FALSE  TRUE  TRUE
+[17,]                           FALSE  TRUE FALSE
+[18,]                           FALSE  TRUE FALSE
+[19,]                           FALSE  TRUE FALSE
+[20,]                           FALSE  TRUE  TRUE
+[21,]                           FALSE FALSE FALSE
+[22,]                           FALSE  TRUE  TRUE
+[23,]                           FALSE  TRUE FALSE
+[24,]                           FALSE FALSE FALSE
+[25,]                           FALSE FALSE FALSE
+[26,]                           FALSE FALSE  TRUE
+[27,]                           FALSE  TRUE  TRUE
+[28,]                           FALSE FALSE FALSE
+[29,]                           FALSE FALSE FALSE
+[30,]                           FALSE  TRUE FALSE
+[31,]                           FALSE  TRUE  TRUE
+[32,]                           FALSE FALSE FALSE
+[33,]                           FALSE    NA FALSE
+[34,]                           FALSE  TRUE FALSE
+[35,]                           FALSE FALSE  TRUE
+[36,]                           FALSE  TRUE  TRUE
+[37,]                           FALSE  TRUE FALSE
+[38,]                           FALSE FALSE  TRUE
+[39,]                           FALSE FALSE FALSE
+[40,]                           FALSE FALSE  TRUE
+[41,]                           FALSE  TRUE FALSE
+[42,]                           FALSE FALSE FALSE
+[43,]                           FALSE FALSE FALSE
+[44,]                           FALSE FALSE  TRUE
+[45,]                           FALSE FALSE    NA
+[46,]                           FALSE  TRUE  TRUE
+[47,]                           FALSE  TRUE  TRUE
+[48,]                           FALSE  TRUE  TRUE
+[49,]                           FALSE  TRUE FALSE
+[50,]                           FALSE  TRUE FALSE
+[51,]                           FALSE FALSE FALSE
+[52,]                           FALSE FALSE FALSE
+[53,]                           FALSE FALSE FALSE
+[54,]                           FALSE  TRUE  TRUE
+[55,]                           FALSE  TRUE  TRUE
+[56,]                           FALSE FALSE FALSE
+[57,]                           FALSE  TRUE  TRUE
+[58,]                           FALSE FALSE FALSE
+[59,]                           FALSE FALSE FALSE
+[60,]                           FALSE  TRUE FALSE
+[61,]                           FALSE  TRUE FALSE
+[62,]                           FALSE FALSE FALSE
+[63,]                           FALSE  TRUE FALSE
+[64,]                           FALSE FALSE  TRUE
+[65,]                           FALSE FALSE FALSE
+[66,]                           FALSE FALSE FALSE
+[67,]                           FALSE  TRUE  TRUE
+[68,]                           FALSE FALSE FALSE
+[69,]                           FALSE  TRUE  TRUE
+[70,]                           FALSE  TRUE FALSE
+[71,]                           FALSE FALSE  TRUE
+[72,]                           FALSE FALSE FALSE
+[73,]                           FALSE  TRUE  TRUE
+[74,]                           FALSE  TRUE  TRUE
+[75,]                           FALSE  TRUE FALSE
+[76,]                           FALSE  TRUE  TRUE
+#ex2(c)
+#ex2(d) 
+#ex3
+>y <- (1/((2π)^1/2))*e^-((x-u)^2)/2σ^2
+>f <- c(x, u, σ)
+>my.dnorm <- function(x){
+}
